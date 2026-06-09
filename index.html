@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Store Bolivia</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0f1117;
+      color: #ffffff;
+    }
+
+    header {
+      width: 100%;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111827;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    nav a {
+      color: #d1d5db;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .login {
+      border: 1px solid #374151;
+      padding: 10px 16px;
+      border-radius: 8px;
+    }
+
+    .hero {
+      padding: 90px 8%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+      background: linear-gradient(135deg, #111827, #1f2937);
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      color: #d1d5db;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      max-width: 620px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 14px 22px;
+      margin-right: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .secondary {
+      background: #1f2937;
+      color: #ffffff;
+      border: 1px solid #374151;
+    }
+
+    .hero-card {
+      background: #ffffff;
+      color: #111827;
+      border-radius: 26px;
+      padding: 30px;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+
+    .hero-card h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .section {
+      padding: 70px 8%;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .section p {
+      color: #9ca3af;
+      margin-bottom: 35px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 20px;
+      padding: 28px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #9ca3af;
+      margin-bottom: 18px;
+    }
+
+    .price {
+      color: #38bdf8;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #1f2937;
+      color: #d1d5db;
+      padding: 7px 11px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .cta {
+      margin: 70px 8%;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      color: #0f172a;
+      border-radius: 28px;
+      padding: 55px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #090b10;
+      padding: 40px 8%;
+      color: #9ca3af;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+
+    footer a {
+      display: block;
+      color: #9ca3af;
+      text-decoration: none;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      nav a {
+        margin: 8px;
+        display: inline-block;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Urban Store</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#empresa">Empresa</a>
+      <a href="#ayuda">Ayuda</a>
+      <a class="login" href="https://wa.me/59170000000">Comprar</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div>
+      <p class="tag">Ropa urbana, deportiva y casual</p>
+      <h1>Ropa moderna para vender en <span>Bolivia</span></h1>
+      <p>
+        Catálogo de prendas con tallas, colores, precios y pedidos por WhatsApp.
+        Ideal para mostrar tus productos y promocionarlos en TikTok, Instagram y Facebook.
+      </p>
+
+      <div class="buttons">
+        <a class="primary" href="#tienda">Explorar tienda</a>
+        <a class="secondary" href="#ayuda">Cómo comprar</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div>
+        <h2>Nuevos ingresos</h2>
+        <p>Poleras oversize, conjuntos deportivos, shorts y pantalones.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="categorias">
+    <h2>Explora por categoría</h2>
+    <p>Organiza tu ropa como una tienda profesional.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Poleras</h3>
+        <p>Oversize, básicas, estampadas y urbanas.</p>
+        <span class="price">Desde Bs 60</span>
+      </div>
+
+      <div class="card">
+        <h3>Conjuntos</h3>
+        <p>Conjuntos deportivos y casuales para hombre y mujer.</p>
+        <span class="price">Desde Bs 150</span>
+      </div>
+
+      <div class="card">
+        <h3>Shorts</h3>
+        <p>Shorts deportivos, urbanos y de temporada.</p>
+        <span class="price">Desde Bs 70</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tienda">
+    <h2>Productos destacados</h2>
+    <p>Estos son productos de ejemplo. Luego los cambiamos por tus fotos reales.</p>
+
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Nuevo</span>
+        <h3>Polera Oversize Negra</h3>
+        <p>Tallas S, M, L, XL. Color negro. Tela suave.</p>
+        <span class="price">Bs 85</span>
+      </div>
+
+      <div class="card">
+        <span class="tag">Oferta</span>
+        <h3>Conjunto Deportivo</h3>
+        <p>Disponible en negro, gris y azul. Ideal para uso diario.</p>
+        <span class="price">Bs 180</span>
+      </div>
+
+      <div class="card">
+        <span class="tag">Disponible</span>
+        <h3>Short Urbano</h3>
+        <p>Short casual con bolsillos. Tallas M, L y XL.</p>
+        <span class="price">Bs 75</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="empresa">
+    <h2>¿Por qué comprar con nosotros?</h2>
+    <p>Agrega aquí las razones para que el cliente confíe en tu tienda.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Catálogo claro</h3>
+        <p>Fotos, precios, tallas y colores disponibles.</p>
+      </div>
+
+      <div class="card">
+        <h3>Pedidos por WhatsApp</h3>
+        <p>El cliente consulta disponibilidad y coordina la compra.</p>
+      </div>
+
+      <div class="card">
+        <h3>Pagos simples</h3>
+        <p>QR, transferencia o efectivo contra entrega.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta" id="ayuda">
+    <h2>¿Listo para comprar?</h2>
+    <p>Escríbenos por WhatsApp para consultar tallas, colores y disponibilidad.</p>
+    <a href="https://wa.me/59170000000">Contactar por WhatsApp</a>
+  </div>
+
+  <footer>
+    <div>
+      <h3>Urban Store</h3>
+      <p>Ropa urbana, deportiva y casual en Bolivia.</p>
+    </div>
+
+    <div>
+      <h3>Enlaces rápidos</h3>
+      <a href="#tienda">Tienda</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#ayuda">Ayuda</a>
+    </div>
+
+    <div>
+      <h3>Contacto</h3>
+      <a href="https://wa.me/59170000000">WhatsApp</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+    </div>
+  </footer>
+
+</body>
+</html>
