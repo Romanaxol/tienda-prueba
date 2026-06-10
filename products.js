@@ -7,7 +7,7 @@
 const STORE_CONFIG = {
   storeName: "Tienda de prueba",
   pageTitle: "Tienda de prueba | Catálogo de ropa",
-  whatsappNumber: "59169726942",
+  whatsappNumber: "59169729642",
   instagramUrl: "#",
   tiktokUrl: "#",
   heroTag: "Ropa urbana, deportiva y casual",
